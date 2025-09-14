@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #6a11cb, #ce1919);
+    height: 100vh;
+    color: #fff;
+}
+
+.calc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+}
+
+#result {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+#weightresult {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.numbers input {
+    margin: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-align: center;
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.numbers input:focus {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+#button {
+    margin: 20px 0;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#button:hover {
+    background: linear-gradient(135deg, #ff5e62, #ff9966);
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.normal {
+    color: #4caf50; 
+    font-weight: bold;
+}
+.underweight {
+    color: #ff9800; 
+    font-weight: bold;
+}
+.overweight {
+    color: #ff5722; 
+    font-weight: bold;
+}
+.obese {
+    color: #f44336; 
+    font-weight: bold;
+}
+
+.bmi-scale {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.bar {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+}
+
+.bar::before {
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background: #ff9800;
+    left: 0;
+}
+.bar::after {
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background: #f44336; 
+    right: 0;
+}
+.bar span, .indicator {
+    z-index: 2;
+}
+
+.bar {
+    background: linear-gradient(
+        to right,
+        #ff9800 0%,
+        #ff9800 25%,
+        #4caf50 25%,
+        #4caf50 50%,
+        #ff5722 50%,
+        #ff5722 75%,
+        #ff1100 75%,
+        #fe1101 100%
+    );
+}
+
+.indicator {
+    position: absolute;
+    top: -10px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 15px solid white;
+    transition: left 0.4s ease;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
