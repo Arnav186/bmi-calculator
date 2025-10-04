@@ -5,11 +5,11 @@ It allows users to input their height (in cm) and weight (in kg) to calculate BM
 
 ---
 
-## 🚀 Features
-- 📊 Calculates BMI instantly from user input.  
-- 🎨 Stylish glassmorphism UI with smooth animations.  
-- 📍 Dynamic indicator showing BMI position on a scale.  
-- 💡 Categorizes result as:
+## Features
+- Calculates BMI instantly from user input.  
+- Stylish glassmorphism UI with smooth animations.  
+- Dynamic indicator showing BMI position on a scale.  
+- Categorizes result as:
   - Underweight  
   - Normal  
   - Overweight  
@@ -18,11 +18,11 @@ It allows users to input their height (in cm) and weight (in kg) to calculate BM
 ---
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **HTML5** – Structure  
 - **CSS3** – Styling & animations  
 - **JavaScript (Vanilla JS)** – Logic & interactivity  
 
 ---
 
-## 📂 Project Structure
+## Project Structure
